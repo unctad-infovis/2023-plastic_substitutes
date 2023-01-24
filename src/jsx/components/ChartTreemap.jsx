@@ -244,7 +244,7 @@ function TreemapChart({
         useHTML: true,
         formatter() {
           // eslint-disable-next-line react/no-this-in-sfc
-          return `<div class="tooltip_container"><div class="tooltip_header">${this.key}</div><div><span class="tooltip_label">Value</span> <span class="tooltip_value">$${roundNr(this.point.value, 0).toLocaleString('en-US')}</span></div></div>`;
+          return `<div class="tooltip_container"><div class="tooltip_header">${this.key}</div><div><span class="tooltip_label"></span> <span class="tooltip_value">$${roundNr(this.point.value, 0).toLocaleString('en-US')}</span></div></div>`;
         }
       },
       xAxis: {
