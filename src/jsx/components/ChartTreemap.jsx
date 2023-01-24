@@ -50,7 +50,6 @@ function TreemapChart({
   const chartRef = useRef();
   const isVisible = useIsVisible(chartRef, { once: true });
 
-  console.log(data);
   const chartHeight = 650;
   const createChart = useCallback(() => {
     Highcharts.chart(`chartIdx${idx}`, {
@@ -238,7 +237,7 @@ function TreemapChart({
         borderColor: '#ccc',
         borderRadius: 0,
         borderWidth: 1,
-        crosshairs: true,
+        crosshairs: false,
         shadow: false,
         shared: true,
         useHTML: true,
