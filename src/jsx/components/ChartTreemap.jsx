@@ -136,6 +136,12 @@ function TreemapChart({
           alternateStartingDirection: true,
           layoutAlgorithm: 'sliceAndDice',
           layoutStartingDirection: 'vertical',
+          dataLabels: {
+            formatter() {
+              // eslint-disable-next-line react/no-this-in-sfc
+              return (this.key !== 'Other Natural Fibres') ? `${this.key}<br />$${this.point.value.toLocaleString('en-US')}` : this.key;
+            }
+          },
           levels: [{
             borderColor: '#000',
             borderWidth: 2,
@@ -210,8 +216,9 @@ function TreemapChart({
           fontWeight: 400,
           lineHeight: '18px'
         },
-        x: 100,
-        text: subtitle
+        text: subtitle,
+        useHTML: true,
+        x: 100
       },
       title: {
         align: 'left',
@@ -238,14 +245,10 @@ function TreemapChart({
         formatter() {
           // eslint-disable-next-line react/no-this-in-sfc
           return `<div class="tooltip_container"><div class="tooltip_header">${this.key}</div><div><span class="tooltip_label">Value</span> <span class="tooltip_value">$${roundNr(this.point.value, 0).toLocaleString('en-US')}</span></div></div>`;
-        },
+        }
       },
       xAxis: {
         allowDecimals: false,
-        crosshair: {
-          color: '#ccc',
-          width: 1
-        },
         labels: {
           enabled: true,
           style: {
@@ -271,7 +274,7 @@ function TreemapChart({
             fontSize: '16px',
             fontWeight: 400
           },
-          text: 'Mean download speed, Mbps'
+          text: ''
         }
       },
       yAxis: [{
@@ -279,10 +282,6 @@ function TreemapChart({
         gridLineColor: 'rgba(124, 112, 103, 0.2)',
         gridLineDashStyle: 'shortdot',
         gridLineWidth: 1,
-        crosshair: {
-          color: '#ccc',
-          width: 1
-        },
         labels: {
           reserveSpace: true,
           style: {
@@ -306,7 +305,7 @@ function TreemapChart({
             fontSize: '16px',
             fontWeight: 400
           },
-          text: 'Share of skilled workers, %',
+          text: ''
         },
         type: 'linear'
       }]
