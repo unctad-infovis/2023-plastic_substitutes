@@ -102,7 +102,7 @@ function App() {
         },
         name: el.name,
         parent: el.parent,
-        value: parseInt(el.value, 10),
+        value: parseFloat(el.value),
       });
       return false;
     });

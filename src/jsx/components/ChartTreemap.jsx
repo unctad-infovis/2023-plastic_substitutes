@@ -138,7 +138,7 @@ function TreemapChart({
           dataLabels: {
             formatter() {
               // eslint-disable-next-line react/no-this-in-sfc
-              return (this.key !== 'Other Natural Fibres') ? `${this.key}<br />$${this.point.value.toLocaleString('en-US')}` : this.key;
+              return (this.key !== 'Other Natural Fibres') ? `${this.key}<br /><strong>$${roundNr(this.point.value).toLocaleString('en-US')}</strong>` : this.key;
             }
           },
           levels: [{
@@ -208,7 +208,6 @@ function TreemapChart({
       subtitle: {
         align: 'left',
         enabled: true,
-        widthAdjust: -100,
         style: {
           color: 'rgba(0, 0, 0, 0.8)',
           fontSize: '16px',
@@ -217,12 +216,12 @@ function TreemapChart({
         },
         text: subtitle,
         useHTML: true,
-        x: 100
+        x: 100,
+        widthAdjust: -100
       },
       title: {
         align: 'left',
         margin: 50,
-        widthAdjust: -144,
         style: {
           color: '#000',
           fontSize: '30px',
@@ -230,7 +229,8 @@ function TreemapChart({
           lineHeight: '34px'
         },
         x: 100,
-        text: title
+        text: title,
+        widthAdjust: -144
       },
       tooltip: {
         backgroundColor: '#fff',
@@ -238,13 +238,13 @@ function TreemapChart({
         borderRadius: 0,
         borderWidth: 1,
         crosshairs: false,
-        shadow: false,
-        shared: true,
-        useHTML: true,
         formatter() {
           // eslint-disable-next-line react/no-this-in-sfc
           return `<div class="tooltip_container"><div class="tooltip_header">${this.key}</div><div><span class="tooltip_label"></span> <span class="tooltip_value">$${roundNr(this.point.value, 0).toLocaleString('en-US')}</span></div></div>`;
-        }
+        },
+        shadow: false,
+        shared: true,
+        useHTML: true
       },
       xAxis: {
         allowDecimals: false,
