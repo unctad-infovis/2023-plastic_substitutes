@@ -131,11 +131,11 @@ function App() {
       <ChartTreemap
         idx="1"
         data={dataFigure}
-        note=""
-        source="source"
-        subtitle="Export presented £335 billion, approximately 2/3 represents exports of raw materials ($256 billion)"
+        note="In addition, Approximately DOLLAR SIMBOL 4 billion of potential ALDFG-substitutes were traded in 2020"
+        source="???"
+        subtitle="Trade value of plastics substitutes exports, billion dollars, 2020"
         suffix=""
-        title="Trade value of plastics substitutes"
+        title="Raw materials are driving the exports of plastic substitutes"
       />
       )}
       <noscript>Your browser does not support JavaScript!</noscript>
