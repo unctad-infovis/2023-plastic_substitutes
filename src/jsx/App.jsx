@@ -131,11 +131,11 @@ function App() {
       <ChartTreemap
         idx="1"
         data={dataFigure}
-        note="In addition, Approximately DOLLAR SIMBOL 4 billion of potential ALDFG-substitutes were traded in 2020"
-        source="???"
-        subtitle="Trade value of plastics substitutes exports, billion dollars, 2020"
+        note="In addition, Approximately $4 billion of potential ALDFG-substitutes were traded in 2020"
+        source="Prepared by UNCTAD secretariat based on UN COMTRADE"
+        subtitle="Less than one fourth of the $336 billion of plastics substitutes exported in 2020 were products with added value. The rest were raw materials."
         suffix=""
-        title="Raw materials are driving the exports of plastic substitutes"
+        title="Trade in plastic substitutes: What’s the added value?"
       />
       )}
       <noscript>Your browser does not support JavaScript!</noscript>
