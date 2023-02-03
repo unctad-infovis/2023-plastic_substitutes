@@ -131,7 +131,7 @@ function App() {
       <ChartTreemap
         idx="1"
         data={dataFigure}
-        note="In addition, Approximately $4 billion of potential ALDFG-substitutes were traded in 2020"
+        note="In addition, approximately $4 billion of potential substitutes for abandoned, lost or otherwise discarded fishing gear were traded in 2020."
         source="Prepared by UNCTAD secretariat based on UN COMTRADE"
         subtitle="One third of the $388 billion of plastics substitutes exported in 2020 were products with added value. The rest were raw materials."
         suffix=""
