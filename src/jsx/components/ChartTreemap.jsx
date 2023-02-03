@@ -221,7 +221,7 @@ function TreemapChart({
       },
       title: {
         align: 'left',
-        margin: 50,
+        margin: 20,
         style: {
           color: '#000',
           fontSize: '30px',
