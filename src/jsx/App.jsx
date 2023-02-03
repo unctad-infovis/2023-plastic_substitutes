@@ -133,7 +133,7 @@ function App() {
         data={dataFigure}
         note="In addition, Approximately $4 billion of potential ALDFG-substitutes were traded in 2020"
         source="Prepared by UNCTAD secretariat based on UN COMTRADE"
-        subtitle="Less than one fourth of the $336 billion of plastics substitutes exported in 2020 were products with added value. The rest were raw materials."
+        subtitle="One third of the $388 billion of plastics substitutes exported in 2020 were products with added value. The rest were raw materials."
         suffix=""
         title="Trade in plastic substitutes: What’s the added value?"
       />
